@@ -1,8 +1,8 @@
 """Adds appliance model
 
-Revision ID: 2edb1c84bfc0
+Revision ID: f4ec595f6b66
 Revises: 
-Create Date: 2023-05-25 16:02:07.003674
+Create Date: 2023-05-25 16:22:35.941172
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '2edb1c84bfc0'
+revision = 'f4ec595f6b66'
 down_revision = None
 branch_labels = None
 depends_on = None
