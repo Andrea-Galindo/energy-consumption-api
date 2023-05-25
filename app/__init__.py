@@ -29,8 +29,8 @@ def create_app(test_config=None):
     migrate.init_app(app, db)
 
     # Register Blueprints here
-    from app.routes.appliance import appliances_bp
-    app.register_blueprint(appliances_bp)
+    # from app.routes.appliance import appliances_bp
+    # app.register_blueprint(appliances_bp)
 
     CORS(app)
     return app
