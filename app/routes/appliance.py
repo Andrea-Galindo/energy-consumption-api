@@ -39,31 +39,31 @@ def create_appliance():
     db.session.add(new_appliance)
     db.session.commit()
 
-#     return jsonify({"appliance": new_appliance.to_dict()}), 201
+    return jsonify({"appliance": new_appliance.to_dict()}), 201
 
-# # replace an appliance (PUT)
-# @appliances_bp.route("/<id>", methods=["PUT"])
-# def update_appliance(id):
-#     appliance = validate_model(Appliance, id)
+# replace an appliance (PUT)
+@appliances_bp.route("/<id>", methods=["PUT"])
+def update_appliance(id):
+    appliance = validate_model(Appliance, id)
 
-#     request_body = request.get_json()
+    request_body = request.get_json()
 
-#     appliance.update(request_body)
+    appliance.update(request_body)
 
-#     db.session.commit()
+    db.session.commit()
    
-#     response = {"appliance": appliance.to_dict()}
-#     return response
+    response = {"appliance": appliance.to_dict()}
+    return response
     
-# # delete a appliance (DELETE)
-# @appliances_bp.route("/<id>", methods=["DELETE"])
-# def delete_appliance(id):
-#     appliance = validate_model(Appliance, id)
+# delete a appliance (DELETE)
+@appliances_bp.route("/<id>", methods=["DELETE"])
+def delete_appliance(id):
+    appliance = validate_model(Appliance, id)
 
-#     # saves name before being deleted 
-#     name = appliance.name
+    # saves name before being deleted 
+    name = appliance.name
 
-#     db.session.delete(appliance)
-#     db.session.commit()
+    db.session.delete(appliance)
+    db.session.commit()
     
-#     return(make_response({"details": f"appliance {id} {name} successfully deleted"}), 200)
+    return(make_response({"details": f"appliance {id} {name} successfully deleted"}), 200)
