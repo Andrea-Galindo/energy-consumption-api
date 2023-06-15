@@ -32,7 +32,7 @@ SQLALCHEMY_TEST_DATABASE_URI=postgresql+psycopg2://postgres:postgres@localhost:5
 9. Initialize migrations: 
 - `$ flask db init` 
 - `$ flask db migrate` 
-- `$ flask db migrate`
+- `$ flask db upgrade`
 
 ## API Endpoints
 1. Start your flask server: `$ flask run` or `$ FLASK_ENV=development flask run`
